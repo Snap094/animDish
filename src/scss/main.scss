@@ -1,0 +1,148 @@
+@import "second";
+
+$bgColor: #c71e75;
+
+body {
+	font-family: 'Roboto';
+	margin: 0;
+	overflow: hidden;
+	width: 100vw;
+	background: $bgColor;
+	font-weight: bold;
+	font-family: arial;
+}
+.increate{
+	display: flex;
+
+}
+.block_img{
+	width: 573px;
+	height: 537px;;
+	background-color: gold;
+}
+#dishImg{
+	width: 100%;
+	transition: 0.5s;
+}
+#dishImg.hide{
+	width: 0;
+}
+#dishImg.show{
+	animation-name: createImg;
+	animation-duration: 1s;
+}
+#dishImg.reset{
+	width: 100%;
+	transition: 0.5s;
+}
+.block_img_mini{
+	width: 100px;
+	height: 100px;
+	background-color: green;
+}
+.selectDishImg{
+	width: 100%;
+	transition: 0.5s;
+}
+.selectDishImg{
+	&.show{
+	animation-name: showImg;
+	animation-duration: 0.5s;
+	}
+}
+.selectDishImg.hide{
+	animation-name: hideImg;
+	animation-duration: 0.5s;
+}
+@keyframes showImg {
+	0%{
+		transform: scale(0)
+	}
+	100%{
+		transform: scale(1)
+	}
+}
+@keyframes hideImg {
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(0);
+	}
+}
+#blockImgMini{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.block_img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#test{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 300px;
+	//height: 300px;
+
+	//background-color: gray;
+	//background-image: url("../img/1_0.png");
+	//background-position: center;
+	//background-size: contain;
+	//background-repeat: no-repeat;
+	//animation-name: animatedMiniImg;
+	//animation-duration: 1s;
+	//animation-iteration-count: infinite;
+	//animation-direction: alternate;
+}
+.Images{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#testImg{
+	width: 100%;
+}
+
+@keyframes animatedMiniImg {
+	0%{
+		background-image: url("../img/1_0.png");
+	}
+	10%{
+		background-image: url("../img/1_1.png");
+	}
+	20%{
+		background-image: url("../img/1_2.png");
+	}
+	30%{
+		background-image: url("../img/1_3.png");
+	}
+	40%{
+		background-image: url("../img/1_4.png");
+	}
+	50%{
+		background-image: url("../img/1_5.png");
+	}
+	60%{
+		background-image: url("../img/1_6.png");
+	}
+	70%{
+		background-image: url("../img/1_7.png");
+	}
+	80%{
+		background-image: url("../img/1_8.png");
+	}
+	90%{
+		background-image: url("../img/1_9.png");
+	}
+	100%{
+		background-image: url("../img/1_10.png");
+
+	}
+}
+@import "fonts";
